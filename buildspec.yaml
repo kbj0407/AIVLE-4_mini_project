@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo "Check Java version"
+      - java -version
+
+  build:
+    commands:
+      - echo "Move to Spring project directory"
+      - cd AIVLE-4_mini_project/miniproject4-spring/miniproject04
+
+      - echo "Grant execute permission to gradlew"
+      - chmod +x gradlew
+
+      - echo "Build Spring Boot application"
+      - ./gradlew build -x test
+
+artifacts:
+  files:
+    - '**/*'
