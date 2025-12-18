@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - cd AIVLE-4_mini_project/miniproject4-next
+      - npm install
+
+  build:
+    commands:
+      - npm run build
