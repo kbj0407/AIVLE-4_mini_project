@@ -4,7 +4,7 @@ spring:
 
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:~/demodb
+    url: jdbc:h2:file:/home/ubuntu/h2db/demodb
     username: sa
     password: 1234
 
@@ -25,3 +25,6 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+image:
+  upload-dir: /home/ubuntu/images
