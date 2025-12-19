@@ -23,6 +23,9 @@ spring:
       hibernate:
         format_sql: true
 
+  image:
+    upload-dir: /home/ubuntu/images
+
 
 #spring:
 #  application:
