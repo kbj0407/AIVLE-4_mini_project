@@ -14,11 +14,11 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceLocations("file:/home/ubuntu/images/");
     }
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://13.209.20.232") // 프론트 EC2 퍼블릭 IP
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*");
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("http://13.209.20.232") // 프론트 EC2 퍼블릭 IP
+//                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+//                .allowedHeaders("*");
+//    }
 }
