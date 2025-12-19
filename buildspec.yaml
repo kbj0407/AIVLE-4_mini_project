@@ -12,7 +12,8 @@ phases:
       - cd miniproject4-spring/miniproject04
       - chmod +x gradlew
       - ./gradlew clean build -x test
+      - cd ../../..
 
 artifacts:
   files:
-    - miniproject4-spring/miniproject04/build/libs/*.jar
+    - '**/*'
