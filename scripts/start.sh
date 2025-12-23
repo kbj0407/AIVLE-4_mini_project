@@ -1,16 +1,11 @@
 #!/bin/bash
 
 APP_DIR=/home/ubuntu/app
-JAR_PATH=$(find $APP_DIR -name "*.jar" | grep build/libs | head -n 1)
+JAR=$APP_DIR/miniproject04-0.0.1-SNAPSHOT.jar
+LOG=$APP_DIR/app.log
 
-if [ -z "$JAR_PATH" ]; then
-  echo "JAR not found" >> $APP_DIR/app.log
-  exit 1
-fi
+pkill -f "$JAR" || true
 
-echo "Starting $JAR_PATH" >> $APP_DIR/app.log
-
-nohup java -jar "$JAR_PATH" \
-  > $APP_DIR/app.log 2>&1 &
+nohup java -jar "$JAR" > "$LOG" 2>&1 &
 
 echo $! > $APP_DIR/app.pid
