@@ -8,4 +8,4 @@ pkill -f 'java -jar' || true
 
 nohup java -jar "$JAR" > "$LOG" 2>&1 &
 
-echo $! > $APP_DIR/app.pid
+echo $! > "$APP_DIR/app.pid"
